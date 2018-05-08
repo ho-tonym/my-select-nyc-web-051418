@@ -6,9 +6,8 @@ def my_select(collection)
     counter = 0
     new_array = Array.new
       while counter < collection.length
-          if yield.block_given?
-            new_array << yield(collection[counter])
-          end
+        yield(collection[counter])
+            new_array << (collection[counter])
       counter +=1
       end
     end
